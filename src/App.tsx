@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Header from "./Components/Header";
 
 const Container = styled.div`
   display: flex;
@@ -7,11 +8,14 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: #734150;
   color: white;
 `;
 const App = () => {
-  return <Container></Container>;
+  return (
+    <Container>
+      <Header />
+    </Container>
+  );
 };
 
 export default App;
