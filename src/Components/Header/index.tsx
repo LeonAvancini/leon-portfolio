@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
 import ProfilePhoto from "./ProfilePhoto";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Container = styled.div`
   display: flex;
@@ -13,10 +15,26 @@ const Container = styled.div`
   border-bottom-left-radius: 200px;
 `;
 
+const DescriptionContainer = styled.div`
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  height: 100%;
+`;
+
 const Name = styled.div`
   display: flex;
-  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: auto;
   font-size: 50px;
+  font-family: "Press Start 2P", cursive;
+`;
+const Paragraph = styled.div`
+  margin: 20px 0px 20px 0px;
+  display: flex;
+  align-items: flex-end;
+  font-size: 15px;
   font-family: "Press Start 2P", cursive;
 `;
 
@@ -29,7 +47,21 @@ export default () => {
       onMouseLeave={() => setMouseOver(false)}
     >
       <ProfilePhoto />
-      <Name>Leon Avancini</Name>
+      <DescriptionContainer>
+        <Name>Leon Avancini</Name>
+        {mouseOver && (
+          <>
+            <Paragraph>
+              <FontAwesomeIcon
+                color={"red"}
+                style={{ marginRight: "10px" }}
+                icon={faMapMarkerAlt}
+              />
+              Cordoba - Argentina
+            </Paragraph>
+          </>
+        )}
+      </DescriptionContainer>
     </Container>
   );
 };
