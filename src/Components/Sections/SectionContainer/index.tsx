@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import AboutSection from "../AboutSection";
 import ContactSection from "../ContactSection";
 import ProjectsSection from "../ProjectsSection";
@@ -19,17 +19,10 @@ const App = () => {
   return (
     <Container>
       <Router>
-        <Switch>
-          <Route path="/projects">
-            <ProjectsSection />
-          </Route>
-          <Route path="/about">
-            <AboutSection />
-          </Route>
-          <Route path="/contact">
-            <ContactSection />
-          </Route>
-        </Switch>
+        <Route exact path="/" component={() => <>Principal</>} />
+        <Route path="/projects" component={ProjectsSection} />
+        <Route path="/about" component={AboutSection} />
+        <Route path="/contact" component={ContactSection} />
       </Router>
     </Container>
   );

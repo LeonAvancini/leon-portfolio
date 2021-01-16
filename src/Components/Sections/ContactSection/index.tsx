@@ -5,6 +5,8 @@ const Container = styled.div`
   display: flex;
 `;
 
-export default () => {
+const ContactSection = () => {
   return <Container>ContactSection</Container>;
 };
+
+export default ContactSection;

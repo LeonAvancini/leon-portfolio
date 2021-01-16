@@ -5,6 +5,8 @@ const Container = styled.div`
   display: flex;
 `;
 
-export default () => {
+const AboutSection = () => {
   return <Container>About Section</Container>;
 };
+
+export default AboutSection;

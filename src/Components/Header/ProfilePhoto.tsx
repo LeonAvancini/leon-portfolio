@@ -2,7 +2,6 @@ import React from "react";
 import Photo from "./ProfileImage.png";
 import styled from "styled-components";
 
-
 const PhotoContainer = styled.div`
   border-radius: 100%;
   height: 400px;
@@ -17,10 +16,12 @@ const StyledImage = styled.img`
   height: 100%;
   border-radius: 50%;
 `;
-export default () => {
+const ProfilePhoto = () => {
   return (
     <PhotoContainer>
       <StyledImage src={Photo}></StyledImage>
     </PhotoContainer>
   );
 };
+
+export default ProfilePhoto;

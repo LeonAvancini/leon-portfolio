@@ -37,7 +37,7 @@ interface NavBarButtonProps {
   path: string;
 }
 
-export default ({ text, path }: NavBarButtonProps) => {
+const NavBarButton = ({ text, path }: NavBarButtonProps) => {
   return (
     <Container>
       <Line />
@@ -45,3 +45,5 @@ export default ({ text, path }: NavBarButtonProps) => {
     </Container>
   );
 };
+
+export default NavBarButton;

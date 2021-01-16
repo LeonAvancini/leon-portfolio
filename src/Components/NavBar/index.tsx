@@ -12,14 +12,16 @@ const Container = styled.div`
   margin: 0px 0px 0px 420px;
 `;
 
-export default () => {
+const NavBar = () => {
   return (
     <Container>
       <Router>
-        <NavBarButton text={"Projects"} path={"/projects"} />
-        <NavBarButton text={"About Me"} path={"/about"} />
-        <NavBarButton text={"Contact"} path={"/contact"} />
+        <NavBarButton text="Projects" path="/projects" />
+        <NavBarButton text="About Me" path="/about" />
+        <NavBarButton text="Contact" path="/contact" />
       </Router>
     </Container>
   );
 };
+
+export default NavBar;

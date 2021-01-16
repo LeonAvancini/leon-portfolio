@@ -30,7 +30,7 @@ const Name = styled.div`
   font-family: "Press Start 2P", cursive;
 `;
 
-export default () => {
+const Header = () => {
   return (
     <Container>
       <ProfilePhoto />
@@ -40,3 +40,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Header;
