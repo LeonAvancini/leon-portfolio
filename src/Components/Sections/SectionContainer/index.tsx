@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import AboutSection from "../AboutSection";
 import ContactSection from "../ContactSection";
 import ProjectsSection from "../ProjectsSection";
@@ -18,14 +18,14 @@ const Container = styled.div`
 const SectionContainer = () => {
   return (
     <Container>
-      <Router>
+      <Switch>
         <Route exact path="/" component={() => <>Principal</>} />
         <Route path="/projects">
           <ProjectsSection />
         </Route>
         <Route path="/about" component={AboutSection} />
         <Route path="/contact" component={ContactSection} />
-      </Router>
+      </Switch>
     </Container>
   );
 };

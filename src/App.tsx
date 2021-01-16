@@ -1,5 +1,7 @@
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import styled from "styled-components";
+
 import Header from "./Components/Header";
 import NavBar from "./Components/NavBar";
 import SectionContainer from "./Components/Sections/SectionContainer";
@@ -15,11 +17,13 @@ const Container = styled.div`
 
 const App = () => {
   return (
-    <Container>
-      <Header />
-      <NavBar />
-      <SectionContainer />
-    </Container>
+    <Router>
+      <Container>
+        <Header />
+        <NavBar />
+        <SectionContainer />
+      </Container>
+    </Router>
   );
 };
 
