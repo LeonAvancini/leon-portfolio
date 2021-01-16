@@ -15,12 +15,14 @@ const Container = styled.div`
   color: white;
 `;
 
-const App = () => {
+const SectionContainer = () => {
   return (
     <Container>
       <Router>
         <Route exact path="/" component={() => <>Principal</>} />
-        <Route path="/projects" component={ProjectsSection} />
+        <Route path="/projects">
+          <ProjectsSection />
+        </Route>
         <Route path="/about" component={AboutSection} />
         <Route path="/contact" component={ContactSection} />
       </Router>
@@ -28,4 +30,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default SectionContainer;
