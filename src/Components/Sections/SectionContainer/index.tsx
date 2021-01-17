@@ -7,11 +7,13 @@ import ProjectsSection from "../ProjectsSection";
 
 const Container = styled.div`
   display: flex;
-  margin-top: 100px;
   justify-content: center;
   align-items: center;
+  border-top: 2px solid white;
+  padding-top: 30px;
+  background-color: black;
   width: 100%;
-  height: 100%;
+  height: 600px;
   color: white;
 `;
 
@@ -19,12 +21,16 @@ const SectionContainer = () => {
   return (
     <Container>
       <Switch>
-        <Route exact path="/" component={() => <>Principal</>} />
+        <Route exact path="/"></Route>
         <Route path="/projects">
           <ProjectsSection />
         </Route>
-        <Route path="/about" component={AboutSection} />
-        <Route path="/contact" component={ContactSection} />
+        <Route path="/about">
+          <AboutSection />
+        </Route>
+        <Route path="/contact">
+          <ContactSection />
+        </Route>
       </Switch>
     </Container>
   );

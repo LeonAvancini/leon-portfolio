@@ -6,10 +6,12 @@ const Container = styled.div`
   display: flex;
   width: 100%;
   height: 400px;
-  background: rgba(255, 255, 255, 0);
+  margin-top: 45px;
+  background: black;
   color: white;
-  border-bottom: 1px solid white;
+  border: 2px solid white;
   border-bottom-left-radius: 200px;
+  border-top-left-radius: 200px;
 `;
 
 const DescriptionContainer = styled.div`
@@ -19,7 +21,8 @@ const DescriptionContainer = styled.div`
   justify-content: flex-end;
   flex-direction: column;
   width: 650px;
-  height: 100%;
+  height: 87px;
+  margin-top: auto;
 `;
 
 const Name = styled.div`
@@ -29,13 +32,21 @@ const Name = styled.div`
   font-size: 50px;
   font-family: "Press Start 2P", cursive;
 `;
-
+const Subtitle = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color:lightblue;
+  font-family: "Press Start 2P", cursive;
+`;
 const Header = () => {
   return (
     <Container>
       <ProfilePhoto />
       <DescriptionContainer>
         <Name>Leon Avancini</Name>
+        <Subtitle>Jr. Full-Stack developer</Subtitle>
       </DescriptionContainer>
     </Container>
   );
