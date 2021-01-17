@@ -7,6 +7,7 @@ const Container = styled.div`
   width: 100%;
   height: 400px;
   margin-top: 45px;
+  margin-left: 70px;
   background: black;
   color: white;
   border: 2px solid white;
@@ -37,7 +38,7 @@ const Subtitle = styled.div`
   justify-content: flex-start;
   margin-bottom: 20px;
   font-size: 18px;
-  color:lightblue;
+  color: lightblue;
   font-family: "Press Start 2P", cursive;
 `;
 const Header = () => {
