@@ -14,8 +14,8 @@ const Container = styled.div`
 const NavBar = () => {
   return (
     <Container>
-      <NavBarButton text="Projects" path="/projects" />
       <NavBarButton text="About Me" path="/about" />
+      <NavBarButton text="Projects" path="/projects" />
       <NavBarButton text="Contact" path="/contact" />
     </Container>
   );

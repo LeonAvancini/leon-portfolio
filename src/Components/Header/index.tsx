@@ -8,8 +8,8 @@ const Container = styled.div`
   height: 400px;
   margin-top: 45px;
   margin-left: 70px;
-  background: black;
-  color: white;
+  background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(173,216,230,0.23573179271708689) 50%, rgba(12,42,88,0) 100%);
   border: 2px solid white;
   border-bottom-left-radius: 200px;
   border-top-left-radius: 200px;
@@ -24,6 +24,7 @@ const DescriptionContainer = styled.div`
   width: 650px;
   height: 87px;
   margin-top: auto;
+  padding-bottom: 20px;
 `;
 
 const Name = styled.div`
@@ -54,3 +55,5 @@ const Header = () => {
 };
 
 export default Header;
+
+/* <FontAwesomeIcon icon={faLaptopCode} /> */

@@ -7,11 +7,10 @@ import ProjectsSection from "../ProjectsSection";
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   border-top: 2px solid white;
   padding-top: 30px;
-  background-color: black;
+  background: black;
   width: 100%;
   height: 600px;
   color: white;
