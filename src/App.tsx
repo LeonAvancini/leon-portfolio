@@ -5,14 +5,20 @@ import styled from "styled-components";
 import Header from "./Components/Header";
 import NavBar from "./Components/NavBar";
 import SectionContainer from "./Components/Sections/SectionContainer";
+import breakpoint from "./Common/breakpoints";
 
 const Container = styled.div`
-  display: flex;
-  margin: 0 auto;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  color: white;
+  @media only screen and ${breakpoint.device.xs} {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+  }
+  @media only screen and ${breakpoint.device.sm} {
+  }
+  @media only screen and ${breakpoint.device.lg} {
+  }
 `;
 
 const App = () => {

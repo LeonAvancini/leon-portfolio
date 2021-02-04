@@ -1,33 +1,62 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import breakpoint from "../../Common/breakpoints";
 
 const Container = styled.div`
-  display: flex;
+  @media only screen and ${breakpoint.device.xs} {
+    display: flex;
+    justify-content: flex-end;
+  }
+  @media only screen and ${breakpoint.device.sm} {
+    color: blue;
+  }
+  @media only screen and ${breakpoint.device.lg} {
+    color: green;
+  }
 `;
 
 const Line = styled.div`
-  display: flex;
-  background: none;
-  color: inherit;
-  border-right: 3px solid white;
-  border-top-right-radius: 60px;
-  width: 31px;
+  @media only screen and ${breakpoint.device.xs} {
+    // display: flex;
+    // background: none;
+    // color: inherit;
+    // border-bottom: 1px solid white;
+    // // border-right: 3px solid white;
+    // // border-top-right-radius: 20px;
+    // width: 10px;
+  }
+  @media only screen and ${breakpoint.device.sm} {
+    color: blue;
+  }
+  @media only screen and ${breakpoint.device.lg} {
+    color: green;
+  }
 `;
 const LinkStyled = styled(Link)`
-  font-family: "Press Start 2P", cursive;
-  background: none;
-  border: 0;
-  color: inherit;
-  cursor: pointer;
-  line-height: 5px;
-  font-size: 15px;
-  overflow: visible;
-  padding: 30px 0px 0px 7px;
-  text-decoration: none;
-  &:hover {
-    line-height: 0px;
-    color: yellow;
+  @media only screen and ${breakpoint.device.xs} {
+    font-family: "Press Start 2P", cursive;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid white;
+    color: inherit;
+    cursor: pointer;
+    // line-height: 5px;
+    font-size: 8px;
+    overflow: visible;
+    margin-top: 20px;
+    padding: 5px;
+    text-decoration: none;
+    &:hover {
+      line-height: 0px;
+      color: yellow;
+    }
+  }
+  @media only screen and ${breakpoint.device.sm} {
+    color: blue;
+  }
+  @media only screen and ${breakpoint.device.lg} {
+    color: green;
   }
 `;
 
