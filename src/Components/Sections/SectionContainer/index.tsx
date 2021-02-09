@@ -8,18 +8,18 @@ import breakpoint from "../../../Common/breakpoints";
 
 const Container = styled.div`
   @media only screen and ${breakpoint.device.xs} {
-    // display: flex;
-    // justify-content: space-between;
-    // border-top: 2px solid white;
-    // background: linear-gradient(
-    //   90deg,
-    //   rgba(0, 0, 0, 1) 25%,
-    //   rgba(173, 216, 230, 0.23573179271708689) 117%,
-    //   rgba(12, 42, 88, 0) 100%
-    // );
-    // width: 100%;
-    // height: 600px;
-    // color: white;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid white;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 25%,
+      rgba(173, 216, 230, 0.23573179271708689) 117%,
+      rgba(12, 42, 88, 0) 100%
+    );
+    width: 100%;
+    min-height: 100vh;
+    color: white;
   }
   @media only screen and ${breakpoint.device.sm} {
     color: blue;

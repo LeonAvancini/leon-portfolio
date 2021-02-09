@@ -38,18 +38,17 @@ const LinkStyled = styled(Link)`
     font-family: "Press Start 2P", cursive;
     background: none;
     border: 0;
-    border-bottom: 2px solid white;
     color: inherit;
     cursor: pointer;
     // line-height: 5px;
-    font-size: 8px;
+    font-size: 9px;
     overflow: visible;
     margin-top: 20px;
     padding: 5px;
     text-decoration: none;
     &:hover {
       line-height: 0px;
-      color: yellow;
+      color: lightblue;
     }
   }
   @media only screen and ${breakpoint.device.sm} {
