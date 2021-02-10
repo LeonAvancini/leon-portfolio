@@ -8,12 +8,6 @@ const Container = styled.div`
     display: flex;
     justify-content: flex-end;
   }
-  @media only screen and ${breakpoint.device.sm} {
-    color: blue;
-  }
-  @media only screen and ${breakpoint.device.lg} {
-    color: green;
-  }
 `;
 
 const Line = styled.div`
@@ -22,18 +16,10 @@ const Line = styled.div`
     // background: none;
     // color: inherit;
     // border-bottom: 1px solid white;
-    // // border-right: 3px solid white;
-    // // border-top-right-radius: 20px;
     // width: 10px;
   }
-  @media only screen and ${breakpoint.device.sm} {
-    color: blue;
-  }
-  @media only screen and ${breakpoint.device.lg} {
-    color: green;
-  }
 `;
-const LinkStyled = styled(Link)`
+const LinkStyled = styled(Link)<{ isSelected?: boolean }>`
   @media only screen and ${breakpoint.device.xs} {
     font-family: "Press Start 2P", cursive;
     background: none;
@@ -43,32 +29,36 @@ const LinkStyled = styled(Link)`
     // line-height: 5px;
     font-size: 9px;
     overflow: visible;
-    margin-top: 20px;
+    margin-top: auto;
     padding: 5px;
     text-decoration: none;
-    &:hover {
-      line-height: 0px;
-      color: lightblue;
-    }
+    color: ${(props) => (props.isSelected ? ` #09e8ee` : `white`)};
+    margin-bottom: ${(props) => (props.isSelected ? `10%` : ``)};
   }
   @media only screen and ${breakpoint.device.sm} {
-    color: blue;
+    font-size: 13px;
+    padding: 10px;
   }
   @media only screen and ${breakpoint.device.lg} {
-    color: green;
+    font-size: 15px;
+    padding: 15px;
   }
 `;
 
 interface NavBarButtonProps {
   text: string;
   path: string;
+  value: () => void;
+  isSelected: boolean;
 }
 
-const NavBarButton = ({ text, path }: NavBarButtonProps) => {
+const NavBarButton = ({ text, path, value, isSelected }: NavBarButtonProps) => {
   return (
-    <Container>
+    <Container onClick={() => value()}>
       <Line />
-      <LinkStyled to={path}>{text}</LinkStyled>
+      <LinkStyled isSelected={isSelected} to={path}>
+        {text}
+      </LinkStyled>
     </Container>
   );
 };

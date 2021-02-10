@@ -21,12 +21,6 @@ const Container = styled.div`
     min-height: 100vh;
     color: white;
   }
-  @media only screen and ${breakpoint.device.sm} {
-    color: blue;
-  }
-  @media only screen and ${breakpoint.device.lg} {
-    color: green;
-  }
 `;
 
 const SectionContainer = () => {

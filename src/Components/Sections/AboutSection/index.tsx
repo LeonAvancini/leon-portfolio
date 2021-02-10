@@ -1,6 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+
+import {
+  faCss3,
+  faHtml5,
+  faJava,
+  faJs,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
 import breakpoint from "../../../Common/breakpoints";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Container = styled.div`
   @media only screen and ${breakpoint.device.xs} {
@@ -8,12 +17,6 @@ const Container = styled.div`
     display: flex;
     display: flex;
     flex-direction: column;
-  }
-  @media only screen and ${breakpoint.device.sm} {
-    color: blue;
-  }
-  @media only screen and ${breakpoint.device.lg} {
-    color: green;
   }
 `;
 const ParagraphContainer = styled.div`
@@ -24,40 +27,54 @@ const ParagraphContainer = styled.div`
   justify-content: flex-start;
   
 }
-@media only screen and ${breakpoint.device.sm} {
-  color: blue;
-}
-@media only screen and ${breakpoint.device.lg} {
-  color: green;
-}
  
 `;
 
 const TextContainer = styled.div`
   @media only screen and ${breakpoint.device.xs} {
     text-align: justify;
-    font-size: 12px;
+    font-size: 13px;
     margin: 10px;
     font-family: "Noto Sans JP", sans-serif;
   }
   @media only screen and ${breakpoint.device.sm} {
-    color: blue;
-  }
-  @media only screen and ${breakpoint.device.lg} {
-    color: green;
+    font-size: 20px;
+    margin: 20px;
   }
 `;
 
 const Phrase = styled.div`
   @media only screen and ${breakpoint.device.xs} {
-    margin: auto;
+    margin-top: 20px;
     text-align: center;
   }
   @media only screen and ${breakpoint.device.sm} {
-    color: blue;
+    margin-top: 30px;
+    font-size: 25px;
+  }
+`;
+
+const IconsContainer = styled.div`
+  @media only screen and ${breakpoint.device.xs} {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #09e8ee;
+  }
+`;
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  @media only screen and ${breakpoint.device.xs} {
+    font-size: 30px;
+    margin: 10px;
+  }
+  @media only screen and ${breakpoint.device.sm} {
+    font-size: 50px;
+    margin: 25px;
   }
   @media only screen and ${breakpoint.device.lg} {
-    color: green;
+    font-size: 60px;
+    margin: 30px;
   }
 `;
 
@@ -65,33 +82,39 @@ const AboutSection = () => {
   return (
     <Container>
       <ParagraphContainer>
+        <TextContainer>Hola, mi nombre es Leon Avancini.</TextContainer>
         <TextContainer>
-          Hola, si estas leyendo esto sabras que mi nombre es Leon Avancini,
-          pero te cuento un poco mas sobre mi...
-        </TextContainer>
-        <TextContainer>
-          Tengo 24 años, actualmente estoy terminando de cursar la carrera de
-          analista en sistemas y hace 8 meses estoy trabajando como
-          desarrollador en una empresa de salud llamada "SrSalud", gracias a
-          este trabajo, que de hecho es el primero relacionado a lo que me gusta
-          estoy teniendo la oportunidad de aprender mucho sobre diferentes
-          tecnologias como Javascript, HTML5, CSS, React.Js y SQL.
+          Mi edad es de 24 años, actualmente estoy terminando de cursar la
+          carrera de analista en sistemas y tambien trabajo como desarrollador
+          en una empresa de salud, gracias a este trabajo
+          estoy teniendo la oportunidad de aprender mas a fondo sobre diferentes
+          tecnologias como Javascript, HTML5, CSS, React.Js y Java.
         </TextContainer>
       </ParagraphContainer>
       <ParagraphContainer>
         <TextContainer>
-          Como soy un desarrollador Jr. trabarme a la hora de hacer algunas
-          cosas es algo frecuente pero por suerte tengo un buen equipo de
-          trabajo que me saca de apuros (Hola Tito y Richard). Tambien por el
-          mismo motivo, es que estoy haciendo mi portfolio, para reafirmar
-          conocimientos y agarrar algunos otros.
+          Como soy desarrollador Junior trabarme a la hora de lograr algunos
+          objetivos es algo frecuente pero por suerte tengo un buen equipo de
+          trabajo que me explica y ayuda cuando esto sucede. Tambien, por el
+          mismo motivo es que estoy haciendo este portfolio, para reafirmar
+          conocimientos y aprender otros.
         </TextContainer>
         <TextContainer>
-          Soy una persona que me considero muy feliz y agradecido por lo que soy
-          y la gente que me rodea, siempre intento compartir conocimientos y
-          contagiar un poco de felicidad.
+          Soy una persona que me considero muy feliz y agradecido por la gente
+          que me rodea, siempre intento compartir conocimientos y contagiar un
+          poco de felicidad.
         </TextContainer>
       </ParagraphContainer>
+      <Phrase>Skills</Phrase>
+
+      <IconsContainer>
+        <StyledFontAwesomeIcon icon={faHtml5} color={"#f06529"} />
+        <StyledFontAwesomeIcon icon={faCss3} color={"#2965f1"} />
+        <StyledFontAwesomeIcon icon={faJs} color={"#f0db4f"} />
+        <StyledFontAwesomeIcon icon={faReact} color={"#00d8ff"} />
+        <StyledFontAwesomeIcon icon={faJava} color={"#f89820"} />
+      </IconsContainer>
+
       <Phrase>
         “Just when you think you’ve successfully navigated one obstacle, another
         emerges. But that’s what keeps life interest“

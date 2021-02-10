@@ -12,7 +12,8 @@ const PhotoContainer = styled.div`
     border: 1px solid white;
   }
   @media only screen and ${breakpoint.device.sm} {
-    color: blue;
+    height: 245px;
+    width: 245px;
   }
   @media only screen and ${breakpoint.device.lg} {
     color: green;
@@ -27,7 +28,10 @@ const StyledImage = styled.img`
     border-radius: 50%;
   }
   @media only screen and ${breakpoint.device.sm} {
-    color: blue;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
   }
   @media only screen and ${breakpoint.device.lg} {
     color: green;

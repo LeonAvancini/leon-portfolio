@@ -15,10 +15,6 @@ const Container = styled.div`
     height: 100%;
     color: white;
   }
-  @media only screen and ${breakpoint.device.sm} {
-  }
-  @media only screen and ${breakpoint.device.lg} {
-  }
 `;
 
 const App = () => {

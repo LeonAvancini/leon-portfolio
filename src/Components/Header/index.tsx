@@ -19,26 +19,10 @@ const Container = styled.div`
     border: 2px solid white;
     border-bottom-left-radius: 200px;
     border-top-left-radius: 200px;
-    color: red;
     box-sizing: border-box;
   }
   @media only screen and ${breakpoint.device.sm} {
-    display: flex;
     height: 250px;
-    width: 100%;
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(173, 216, 230, 0.23573179271708689) 50%,
-      rgba(12, 42, 88, 0) 100%
-    );
-    border: 2px solid white;
-    border-bottom-left-radius: 200px;
-    border-top-left-radius: 200px;
-    color: red;
-    box-sizing: border-box;
-  }
-  @media only screen and ${breakpoint.device.lg} {
   }
 `;
 
@@ -54,16 +38,10 @@ const DescriptionContainer = styled.div`
     padding-bottom: 5px;
   }
   @media only screen and ${breakpoint.device.sm} {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
     margin: auto;
-    width: 300px;
+    width: 500px;
     height: 100%;
-    margin-top: auto;
-    padding-bottom: 5px;
-  }
-  @media only screen and ${breakpoint.device.lg} {
   }
 `;
 
@@ -80,17 +58,23 @@ const NameContainer = styled.div`
     color: white;
   }
   @media only screen and ${breakpoint.device.sm} {
-    display: flex;
-    font-size: 20px;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 25px;
+    margin-left: 0px;
     width: 100%;
-    font-family: "Press Start 2P", cursive;
-    color: white;
   }
   @media only screen and ${breakpoint.device.lg} {
+    font-size: 30px;
   }
 `;
 const ParagraphStyled = styled.div`
-  padding-bottom: 5px;
+  @media only screen and ${breakpoint.device.xs} {
+    padding-bottom: 5px;
+  }
+  @media only screen and ${breakpoint.device.sm} {
+    margin: 0px 5px;
+  }
 `;
 const Subtitle = styled.div`
   @media only screen and ${breakpoint.device.xs} {
@@ -101,13 +85,18 @@ const Subtitle = styled.div`
     justify-content: flex-start;
     margin-bottom: 10px;
     font-size: 7px;
-    color: lightblue;
+    color: #09e8ee;
     font-family: "Press Start 2P", cursive;
     margin-left: 40px;
   }
   @media only screen and ${breakpoint.device.sm} {
+    flex-direction: row;
+    justify-content: center;
+    font-size: 10px;
+    margin-left: 0px;
   }
   @media only screen and ${breakpoint.device.lg} {
+    font-size: 13px;
   }
 `;
 const Header = () => {
