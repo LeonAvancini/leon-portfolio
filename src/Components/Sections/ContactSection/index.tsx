@@ -71,6 +71,22 @@ const ContactSection = () => {
       >
         <StyledFontAwesomeIcon icon={faWhatsapp} color={"#25d366"} />
       </IconContainer>
+
+      {/* <form
+        action={"mailto:avancinileon@gmail.com"}
+        method="POST"
+        name="EmailForm"
+      >
+        <input type="text" size={19} name="Contact-Name" />
+
+        <input type="email" name="Contact-Email" />
+
+        <textarea name="Contact-Message" rows={6} cols={20} />
+
+        <button type="submit" value="Submit">
+          Send
+        </button>
+      </form> */}
     </Container>
   );
 };

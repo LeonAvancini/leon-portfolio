@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import breakpoint from "../../../Common/breakpoints";
+import MovieRankImage from "./Images/movieRankImage.jpg";
+import LeonPortfolioImage from "./Images/leonPortfolioImage.jpg";
 
 const Container = styled.div`
   @media only screen and ${breakpoint.device.xs} {
@@ -30,8 +32,8 @@ const ProjectContainer = styled.div`
     max-width: 80%;
   }
   @media only screen and ${breakpoint.device.lg} {
-    max-height: 50%;
-    max-width: 50%;
+    max-height: 100%;
+    max-width: 100%;
     margin: 30px 20px 50px 20px;
     position: relative;
   }
@@ -56,10 +58,21 @@ const ProjectTitle = styled.div`
     font-size: 20px;
   }
 `;
+
+const ColorTitle = styled.div`
+  @media only screen and ${breakpoint.device.xs} {
+    font-size: 13px;
+    color: orange;
+  }
+  @media only screen and ${breakpoint.device.sm} {
+    font-size: 20px;
+  }
+`;
 const ProjectImage = styled.img`
   @media only screen and ${breakpoint.device.xs} {
     border-radius: 5px;
     max-width: 100%;
+    border: 2px solid white;
   }
 `;
 
@@ -77,19 +90,24 @@ const HrStyled = styled.hr`
 const ProjectsSection = () => {
   return (
     <Container>
-      <ProjectContainer onClick={() => window.open("http://www.google.com")}>
-        <ProjectTitle>Project 1</ProjectTitle>
-        <ProjectImage src="https://picsum.photos/500" />
+      <ProjectContainer
+        onClick={() =>
+          window.open("https://github.com/LeonAvancini/leon-portfolio")
+        }
+      >
+        <ProjectTitle>Leon Avancini - Portfolio</ProjectTitle>
+        <ProjectImage src={LeonPortfolioImage} />
       </ProjectContainer>
       <HrStyled />
-      <ProjectContainer>
-        <ProjectTitle>Project 2</ProjectTitle>
-        <ProjectImage src="https://picsum.photos/500" />
-      </ProjectContainer>
-      <HrStyled />
-      <ProjectContainer>
-        <ProjectTitle>Project 3</ProjectTitle>
-        <ProjectImage src="https://picsum.photos/500" />
+      <ProjectContainer
+        onClick={() =>
+          window.open("https://github.com/LeonAvancini/movie-ranking")
+        }
+      >
+        <ProjectTitle>
+          Movie-Ranking <ColorTitle>(en desarrollo)</ColorTitle>
+        </ProjectTitle>
+        <ProjectImage src={MovieRankImage} />
       </ProjectContainer>
     </Container>
   );

@@ -28,7 +28,7 @@ const SectionContainer = () => {
     <Container>
       <Switch>
         <Route exact path="/">
-          <ProjectsSection />
+          <AboutSection />
         </Route>
         <Route path="/projects">
           <ProjectsSection />

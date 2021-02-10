@@ -19,7 +19,7 @@ const Line = styled.div`
     // width: 10px;
   }
 `;
-const LinkStyled = styled(Link)<{ isSelected?: boolean }>`
+const LinkStyled = styled(Link)<{ selected?: boolean }>`
   @media only screen and ${breakpoint.device.xs} {
     font-family: "Press Start 2P", cursive;
     background: none;
@@ -32,8 +32,8 @@ const LinkStyled = styled(Link)<{ isSelected?: boolean }>`
     margin-top: auto;
     padding: 5px;
     text-decoration: none;
-    color: ${(props) => (props.isSelected ? ` #09e8ee` : `white`)};
-    margin-bottom: ${(props) => (props.isSelected ? `10%` : ``)};
+    color: ${(props) => (props.selected ? ` #09e8ee` : `white`)};
+    margin-bottom: ${(props) => (props.selected ? `10%` : ``)};
   }
   @media only screen and ${breakpoint.device.sm} {
     font-size: 13px;
@@ -49,14 +49,19 @@ interface NavBarButtonProps {
   text: string;
   path: string;
   value: () => void;
-  isSelected: boolean;
+  selectedButton: boolean;
 }
 
-const NavBarButton = ({ text, path, value, isSelected }: NavBarButtonProps) => {
+const NavBarButton = ({
+  text,
+  path,
+  value,
+  selectedButton,
+}: NavBarButtonProps) => {
   return (
     <Container onClick={() => value()}>
       <Line />
-      <LinkStyled isSelected={isSelected} to={path}>
+      <LinkStyled selected={selectedButton} to={path}>
         {text}
       </LinkStyled>
     </Container>

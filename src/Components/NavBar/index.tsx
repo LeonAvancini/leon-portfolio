@@ -21,7 +21,7 @@ const Container = styled.div`
 
 const NavBar = () => {
   const [aboutSelected, setAboutSelected] = useState(false);
-  const [projectsSelected, setProjectsSelected] = useState(true);
+  const [projectsSelected, setProjectsSelected] = useState(false);
   const [contactSelected, setContactSelected] = useState(false);
 
   const changeFocus = (value: string) => {
@@ -43,22 +43,22 @@ const NavBar = () => {
   return (
     <Container>
       <NavBarButton
-        text="About Me"
+        text="Sobre Mí"
         path="/about"
         value={() => changeFocus("about")}
-        isSelected={aboutSelected}
+        selectedButton={aboutSelected}
       />
       <NavBarButton
-        text="Projects"
+        text="Proyectos"
         path="/projects"
         value={() => changeFocus("projects")}
-        isSelected={projectsSelected}
+        selectedButton={projectsSelected}
       />
       <NavBarButton
-        text="Contact"
+        text="Contacto"
         path="/contact"
         value={() => changeFocus("contact")}
-        isSelected={contactSelected}
+        selectedButton={contactSelected}
       />
     </Container>
   );
