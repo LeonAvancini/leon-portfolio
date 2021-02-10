@@ -1,15 +1,15 @@
 # Leon Avancini - Portfolio
 
-## Available Scripts
+## Como levantar el portfolio:
 
-En el directorio del proyecto ejecuta:
+1 - En el directorio del proyecto ejecuta:
 
 ### `npm i`
 
-Instala las dependecias usadas en el proyecto.\
+2 - Instala las librerias usadas en el proyecto.\
 
 ### `npm start`
 
-Ejecuta la aplicacion modo desarrollo.
+3 - Ejecuta la aplicacion modo desarrollo.
 
-Al ejecutar 'npm start' => abrir el siguiente enlace [http://localhost:3000] para ver el proyecto en el navegador por defecto
+4 - ejecutar 'npm start' => abrir el siguiente enlace [http://localhost:3000] para ver el proyecto en el navegador por defecto
