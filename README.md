@@ -1,6 +1,6 @@
 # Leon Avancini - Portfolio
 
-## Como levantar el portfolio:
+## Como levantar el proyecto:
 
 1 - En el directorio del proyecto ejecuta:
 
