@@ -2,14 +2,16 @@
 
 ## Como levantar el proyecto:
 
-1 - En el directorio del proyecto ejecuta:
+1 - Abrir la consola en la carpeta del proyecto.
+
+2 - Ejecuta:
 
 ### `npm i`
 
-2 - Instala las librerias usadas en el proyecto.\
+Para instalar las librerias usadas.
+
+3- Ejecuta:
 
 ### `npm start`
 
-3 - Ejecuta la aplicacion modo desarrollo.
-
-4 - ejecutar 'npm start' => abrir el siguiente enlace [http://localhost:3000] para ver el proyecto en el navegador por defecto
+Para iniciar la aplicacion modo desarrollo. abrir el siguiente enlace [http://localhost:3000] para ver el proyecto en el navegador por defecto
