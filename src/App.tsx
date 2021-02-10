@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import styled from "styled-components";
 
 import Header from "./Components/Header";
@@ -19,13 +19,13 @@ const Container = styled.div`
 
 const App = () => {
   return (
-    <Router>
+    <HashRouter basename="/">
       <Container>
         <Header />
         <NavBar />
         <SectionContainer />
       </Container>
-    </Router>
+    </HashRouter>
   );
 };
 
