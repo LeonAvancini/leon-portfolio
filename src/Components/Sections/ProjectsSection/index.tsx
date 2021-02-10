@@ -33,7 +33,7 @@ const ProjectContainer = styled.div`
   }
   @media only screen and ${breakpoint.device.lg} {
     max-height: 100%;
-    max-width: 100%;
+    max-width: 40%;
     margin: 30px 20px 50px 20px;
     position: relative;
   }
