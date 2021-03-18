@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
   color: white;
-  background-image: url(./Images/Nais.jpg);
+  background-image: url("https://i.imgur.com/imy0w5f.jpg");
 }
 
 code {

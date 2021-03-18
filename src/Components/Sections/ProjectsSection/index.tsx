@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import breakpoint from "../../../Common/breakpoints";
-import MovieRankImage from "./Images/movieRankImage.jpg";
-import LeonPortfolioImage from "./Images/leonPortfolioImage.jpg";
 
 const Container = styled.div`
   @media only screen and ${breakpoint.device.xs} {
@@ -96,7 +94,7 @@ const ProjectsSection = () => {
         }
       >
         <ProjectTitle>Leon Avancini - Portfolio</ProjectTitle>
-        <ProjectImage src={LeonPortfolioImage} />
+        <ProjectImage src={"https://i.imgur.com/WgU8qeN.jpg"} />
       </ProjectContainer>
       <HrStyled />
       <ProjectContainer
@@ -104,10 +102,19 @@ const ProjectsSection = () => {
           window.open("https://github.com/LeonAvancini/movie-ranking")
         }
       >
+        <ProjectTitle>Api-connected-website</ProjectTitle>
+        <ProjectImage src={"https://i.imgur.com/9KROY0g.png"} />
+      </ProjectContainer>
+      <HrStyled />
+      <ProjectContainer
+        onClick={() =>
+          window.open("https://leonavancini.github.io/api-connected-website/")
+        }
+      >
         <ProjectTitle>
           Movie-Ranking <ColorTitle>(en desarrollo)</ColorTitle>
         </ProjectTitle>
-        <ProjectImage src={MovieRankImage} />
+        <ProjectImage src={"https://i.imgur.com/YO8vUZQ.jpg"} />
       </ProjectContainer>
     </Container>
   );

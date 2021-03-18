@@ -1,5 +1,4 @@
 import React from "react";
-import Photo from "./ProfileImage.png";
 import styled from "styled-components";
 import breakpoint from "../../Common/breakpoints";
 
@@ -41,7 +40,7 @@ const StyledImage = styled.img`
 const ProfilePhoto = () => {
   return (
     <PhotoContainer>
-      <StyledImage src={Photo}></StyledImage>
+      <StyledImage src={"https://i.imgur.com/42AEatY.png"}></StyledImage>
     </PhotoContainer>
   );
 };
