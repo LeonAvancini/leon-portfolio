@@ -43,7 +43,7 @@ const ProjectTitle = styled.div`
     color: black;
     font-weight: bold;
     font-family: arial;
-    background: white;
+    background: lightgray;
     padding: 5px 10px;
     font-size: 13px;
     border-bottom-right-radius: 5px;
@@ -69,7 +69,8 @@ const ColorTitle = styled.div`
 const ProjectImage = styled.img`
   @media only screen and ${breakpoint.device.xs} {
     border-radius: 5px;
-    max-width: 100%;
+    height: calc(100% - 0px);
+     object-fit: cover;
     border: 2px solid white;
   }
 `;
@@ -90,11 +91,11 @@ const ProjectsSection = () => {
     <Container>
       <ProjectContainer
         onClick={() =>
-          window.open("https://github.com/LeonAvancini/leon-portfolio")
+          window.open("https://github.com/LeonAvancini/cart-manager")
         }
       >
-        <ProjectTitle>Leon Avancini - Portfolio</ProjectTitle>
-        <ProjectImage src={"https://i.imgur.com/WgU8qeN.jpg"} />
+        <ProjectTitle>Cart-manager</ProjectTitle>
+        <ProjectImage src={"https://i.imgur.com/m2C2sZj.jpg"} />
       </ProjectContainer>
       <HrStyled />
       <ProjectContainer
@@ -115,6 +116,15 @@ const ProjectsSection = () => {
           Movie-Ranking <ColorTitle>(en desarrollo)</ColorTitle>
         </ProjectTitle>
         <ProjectImage src={"https://i.imgur.com/YO8vUZQ.jpg"} />
+      </ProjectContainer>
+      <HrStyled />
+      <ProjectContainer
+        onClick={() =>
+          window.open("https://github.com/LeonAvancini/leon-portfolio")
+        }
+      >
+        <ProjectTitle>Leon Avancini - Portfolio</ProjectTitle>
+        <ProjectImage src={"https://i.imgur.com/WgU8qeN.jpg"} />
       </ProjectContainer>
     </Container>
   );
