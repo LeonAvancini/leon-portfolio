@@ -69,8 +69,9 @@ const ColorTitle = styled.div`
 const ProjectImage = styled.img`
   @media only screen and ${breakpoint.device.xs} {
     border-radius: 5px;
+    width: 100%;
     height: calc(100% - 0px);
-     object-fit: cover;
+    object-fit: cover;
     border: 2px solid white;
   }
 `;
